@@ -297,6 +297,10 @@ async function checkBrokenLinks($, hostname) {
   return broken;
 }
 
+app.get("/", (req, res) => {
+  res.send("SEO Checker API is running. Use the /api/seo-checker endpoint.");
+});
+
 // ------------------- endpoint -------------------
 app.post("/api/seo-checker", async (req, res) => {
   const debugPayload = {};
